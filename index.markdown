@@ -4,7 +4,6 @@
 
 title: Roman Pavelka
 description: Roman Pavelka, personal webpage
-show_downloads: true
 ---
 
 Welcome on my personal webpage.
