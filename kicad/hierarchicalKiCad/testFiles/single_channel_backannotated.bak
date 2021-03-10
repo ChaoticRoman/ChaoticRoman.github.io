@@ -1,0 +1,111 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:single_channel_backannotated-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L R R1
+U 1 1 54CE04A8
+P 1700 1950
+F 0 "R1" V 1780 1950 50  0000 C CNN
+F 1 "R" V 1707 1951 50  0000 C CNN
+F 2 "SMD_Packages:SMD-0805" V 1950 1900 30  0000 C CNN
+F 3 "" H 1700 1950 30  0000 C CNN
+	1    1700 1950
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D1
+U 1 1 54CE0528
+P 2000 1750
+F 0 "D1" H 2000 1850 50  0000 C CNN
+F 1 "LED" H 2000 1650 50  0000 C CNN
+F 2 "SMD_Packages:SMD-0805" H 2000 1600 30  0000 C CNN
+F 3 "" H 2000 1750 60  0000 C CNN
+	1    2000 1750
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	1950 1950 2000 1950
+Text HLabel 2000 2200 2    60   Input ~ 0
+LED_K_$(#)
+$Comp
+L GND #PWR01
+U 1 1 54CE070A
+P 1450 1950
+F 0 "#PWR01" H 1450 1700 60  0001 C CNN
+F 1 "GND" H 1450 1800 60  0000 C CNN
+F 2 "" H 1450 1950 60  0000 C CNN
+F 3 "" H 1450 1950 60  0000 C CNN
+	1    1450 1950
+	1    0    0    -1  
+$EndComp
+Connection ~ 2000 1950
+Wire Notes Line
+	1250 1100 2550 1100
+Wire Notes Line
+	2550 1100 2550 2450
+Wire Notes Line
+	2550 2450 1250 2450
+Wire Notes Line
+	1250 2450 1250 1100
+Text Notes 1250 1200 0    60   ~ 0
+Channel $(#)
+Wire Wire Line
+	2000 1950 2000 2350
+Wire Wire Line
+	2000 1400 2000 1550
+Text HLabel 2000 1400 2    60   Input ~ 0
+VCC
+Text Label 2000 2350 2    60   ~ 0
+LED_K_$(#)
+Text GLabel 1700 1450 0    60   Input ~ 0
+0.01V
+NoConn ~ 1700 1450
+Text Notes 2400 1200 0    60   ~ 0
+Hi!
+Text GLabel 1700 1650 0    60   Input ~ 0
+ref_$(#)
+NoConn ~ 1700 1650
+$EndSCHEMATC

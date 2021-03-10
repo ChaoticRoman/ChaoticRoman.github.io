@@ -1,0 +1,84 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:single_channel-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L R R1
+U 1 1 54CE04A8
+P 5350 3550
+F 0 "R1" V 5430 3550 50  0000 C CNN
+F 1 "R" V 5357 3551 50  0000 C CNN
+F 2 "" V 5280 3550 30  0000 C CNN
+F 3 "" H 5350 3550 30  0000 C CNN
+	1    5350 3550
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D1
+U 1 1 54CE0528
+P 5650 3350
+F 0 "D1" H 5650 3450 50  0000 C CNN
+F 1 "LED" H 5650 3250 50  0000 C CNN
+F 2 "" H 5650 3350 60  0000 C CNN
+F 3 "" H 5650 3350 60  0000 C CNN
+	1    5650 3350
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	5600 3550 5650 3550
+Text HLabel 5650 3150 0    60   Input ~ 0
+LED_A_$(#)
+$Comp
+L GND #PWR01
+U 1 1 54CE070A
+P 5100 3550
+F 0 "#PWR01" H 5100 3300 60  0001 C CNN
+F 1 "GND" H 5100 3400 60  0000 C CNN
+F 2 "" H 5100 3550 60  0000 C CNN
+F 3 "" H 5100 3550 60  0000 C CNN
+	1    5100 3550
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

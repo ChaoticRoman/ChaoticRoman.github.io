@@ -1,0 +1,17 @@
+Cmp-Mod V01 Created by Cvpcb (2015-02-01 BZR 5398)-product   date = Sun 01 Feb 2015 12:11:40 PM CET
+
+BeginCmp
+TimeStamp = /54CE0528;
+Reference = D1;
+ValeurCmp = LED;
+IdModule  = SMD_Packages:SMD-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54CE04A8;
+Reference = R1;
+ValeurCmp = R;
+IdModule  = SMD_Packages:SMD-0805;
+EndCmp
+
+EndListe

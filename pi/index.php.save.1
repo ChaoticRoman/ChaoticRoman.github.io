@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Roman Pavelka, personal web page, section fireshow</title>
+  <meta name="author" content="Roman Pavelka">
+  <meta name="keywords" content="Roman,Pavelka,fireshow,FNSPE, hitchhiking, traveling, physics, programming, linux, atmel, AVR, electronics, fireshow">
+  <meta name="description" content="Personal web page Roman Pavelka, fireshow section">
+  <meta charset="UTF-8">
+
+  <link rel="shortcut icon" href="favicon.ico">
+  <!--
+  <link REL="stylesheet" TYPE="text/css" href="../base/style.css">
+  <link REL="stylesheet" TYPE="text/css" href="../base/pygments.css">
+  <script type="text/javascript" src="../base/script.js"></script>
+  -->
+  <?php include_once("googleanalytics.php") ?>
+</head>
+
+<body>
+
+<h1>Raspberry Pi</h1>
+
+<h2>Deployment</h2>
+<pre>
+aptitude remove wolfram-engine  # 454 MB freed...
+
+</pre>
+
+<h2>Modules building</h2>
+Firts you need headers of your kernel, the simplest way to get them is the rpi-source script.
+<pre>
+sudo wget https://raw.githubusercontent.com/notro/rpi-source/master/rpi-source -O /usr/bin/rpi-source
+sudo chmod +x /usr/bin/rpi-source
+/usr/bin/rpi-source -q --tag-update
+</pre>
+
+<h2>D-Link GO-USB-N150 Wireless N150 USB Adapter</h2>
+This is nice cheap 802.11b/g/n, up to 150 Mbit/s, USB2.0 wifi adapter.
+With 1A 5V supply I didn't get any problems supplying this stick and webcam directly from Pi.<p>
+
+Install kernel headers as explained above and compile and install RTL8188EU driver from
+<pre>
+https://github.com/lwfinger/rtl8188eu
+</pre>
+
+<h2>Nginx instead of Apache</h2>
+
+installation
+<pre>
+http://elinux.org/RPi_Nginx_Webserver
+</pre>
+To allow directory listings:
+<pre>
+        location /somedir {
+               autoindex on;
+        }
+</pre>
+<pre>
+https://www.digitalocean.com/community/tutorials/how-to-set-up-http-authentication-with-nginx-on-ubuntu-12-10
+</pre>
+
+</body>
+</html>
