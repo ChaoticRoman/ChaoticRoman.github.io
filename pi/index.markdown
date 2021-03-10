@@ -1,5 +1,8 @@
 <h1>Raspberry Pi</h1>
 
+More available in [scripts directory](scripts) and
+[this repo](https://github.com/ChaoticRoman/rpirepo).
+
 <h2>Deployment with Raspbian</h2>
 <pre>
 passwd

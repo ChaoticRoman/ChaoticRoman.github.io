@@ -19,5 +19,7 @@ LinkedIn: <a href="https://www.linkedin.com/in/roman-pavelka-b721339b/">Roman Pa
   <a href='net'>Networking</a><br>
   <a href='bash'>Bash</a><br>
   <a href='python'>Python</a><br>
+  <a href='https://docs.google.com/document/d/1_MJSi8OFwptRwPrKsqrWDVxT5rG6KoHWJWzKFEDcVgE'>C++ tricks [Google doc]</a><br>
+  <a href='https://docs.google.com/document/d/1R2KTPmzWfuTrcC5v-jNdfptanTI2-d7Hwm4SZE9hlhk'>Qt tricks [Google doc]</a><br>
   <a href='law'>Law / <span lang='cs'>Zákony</span> [in czech]</a><br>
   <a href='fireshow'>Fireshow</a><br>
