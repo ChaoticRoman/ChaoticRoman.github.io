@@ -1,8 +1,6 @@
 ---
-title: Roman Pavelka
+title: romanpavelka.cz
 description: personal webpage
 ---
 
 Welcome!
-
-
