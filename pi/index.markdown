@@ -1,14 +1,16 @@
-<h1>Raspberry Pi</h1>
+# Raspberry Pi tips and tricks
 
-More available in [scripts directory](scripts) and
-[this repo](https://github.com/ChaoticRoman/rpirepo).
+My scripts often used on rpi are available in [this repo](https://github.com/ChaoticRoman/rpirepo).
 
-<h2>Deployment with Raspbian</h2>
-<pre>
+## Deployment with Raspbian
+
+```bash
 passwd
 sudo su
 passwd
-raspi-config # enlarge card, set hostname and restart
+
+# enlarge card, set hostname and restart
+raspi-config
 
 sudo su
 cp /usr/share/zoneinfo/Europe/Prague /etc/localtime
@@ -21,12 +23,13 @@ aptitude full-upgrade
 
 aptitude install python-matplotlib image-magick autossh -y
 ssh-keygen -t rsa
-</pre>
+```
 
-<h2>Set wifi and dhcp on Raspbian</h2>
-Your /etc/wpa_supplicant/wpa_supplicant.conf should look like this:
+## Set wifi and dhcp on Raspbian
 
-<pre>
+Your `/etc/wpa_supplicant/wpa_supplicant.conf` should look like this:
+
+```
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 update_config=1
 
@@ -38,10 +41,11 @@ network={
   pairwise=CCMP
   auth_alg=OPEN
 }
-</pre>
+```
 
-and your /etc/network/interfaces
-<pre>
+and your `/etc/network/interfaces`
+
+```
 auto lo
 
 iface lo inet loopback
@@ -54,14 +58,14 @@ wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
 wireless-power off
 
 iface default inet dhcp
-</pre>
-
+```
 
 
 Then I have little script for logging wifi status and restarting it when needed.
-<p>
-check_net.sh
-<pre>
+(`check_net.sh` is available also
+[here](https://github.com/ChaoticRoman/rpirepo/blob/main/scripts/check_net.sh))
+
+```bash
 #!/bin/bash
 
 DATE=`date +%Y-%m-%dT%H:%M:%S`
@@ -85,47 +89,49 @@ sudo killall -q dhclient
 sudo killall -q wpa_supplicant
 sleep 5
 sudo ifup --force wlan0
-</pre>
+```
+
 I use cron calling it every five minutes.
 
+## Modules building
 
-<h2>Modules building</h2>
 Firts you need headers of your kernel, the simplest way to get them is the rpi-source script.
-<pre>
+
+```bash
 sudo wget https://raw.githubusercontent.com/notro/rpi-source/master/rpi-source -O /usr/bin/rpi-source
 sudo chmod +x /usr/bin/rpi-source
 /usr/bin/rpi-source -q --tag-update
-</pre>
+```
 
-<h2>D-Link GO-USB-N150 Wireless N150 USB Adapter</h2>
+## D-Link GO-USB-N150 Wireless N150 USB Adapter
+
 This is nice cheap 802.11b/g/n, up to 150 Mbit/s, USB2.0 wifi adapter.
-With 1A 5V supply I didn't get any problems supplying this stick and webcam directly from Pi.<p>
+
+With 1A 5V supply I didn't get any problems supplying this stick and webcam directly from Pi.
 
 Install kernel headers as explained above and compile and install RTL8188EU driver from
-<pre>
 https://github.com/lwfinger/rtl8188eu
-</pre>
 
-<h2>Nginx instead of Apache</h2>
+## Nginx instead of Apache
 
-installation
-<pre>
+```bash
 sudo su
 aptitude install nginx -y && aptitude install php5-fpm -y
 nano /etc/nginx/sites-enabled/default # I like to set document root to /var/www
 nano /etc/php5/fpm/php.ini            # set cgi.fix_pathinfo=0
 service php5-fpm restart
 service nginx restart
-</pre>
-Source:http://elinux.org/RPi_Nginx_Webserver
+```
 
-<p>
+Source: http://elinux.org/RPi_Nginx_Webserver
+
 To allow directory listings, set in site configuration file (that linked in /etc/nginx/sites-enabled):
-<pre>
+```
         location /somedir {
                autoindex on;
         }
-</pre>
-here the root / presents root directory of the webpage.
-<p>
+```
+
+here the root path `/` presents root directory of the webpage as specified in `/etc/nginx/sites-enabled/default`.
+
 Source: https://www.digitalocean.com/community/tutorials/how-to-set-up-http-authentication-with-nginx-on-ubuntu-12-10
