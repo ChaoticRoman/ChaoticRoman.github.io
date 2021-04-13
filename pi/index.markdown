@@ -110,7 +110,7 @@ This is nice cheap 802.11b/g/n, up to 150 Mbit/s, USB2.0 wifi adapter.
 With 1A 5V supply I didn't get any problems supplying this stick and webcam directly from Pi.
 
 Install kernel headers as explained above and compile and install RTL8188EU driver from
-https://github.com/lwfinger/rtl8188eu
+[https://github.com/lwfinger/rtl8188eu].
 
 ## Nginx instead of Apache
 
@@ -123,7 +123,7 @@ service php5-fpm restart
 service nginx restart
 ```
 
-Source: http://elinux.org/RPi_Nginx_Webserver
+Source: [http://elinux.org/RPi_Nginx_Webserver]
 
 To allow directory listings, set in site configuration file (that linked in /etc/nginx/sites-enabled):
 ```
@@ -134,4 +134,4 @@ To allow directory listings, set in site configuration file (that linked in /etc
 
 here the root path `/` presents root directory of the webpage as specified in `/etc/nginx/sites-enabled/default`.
 
-Source: https://www.digitalocean.com/community/tutorials/how-to-set-up-http-authentication-with-nginx-on-ubuntu-12-10
+Source: [https://www.digitalocean.com/community/tutorials/how-to-set-up-http-authentication-with-nginx-on-ubuntu-12-10]
