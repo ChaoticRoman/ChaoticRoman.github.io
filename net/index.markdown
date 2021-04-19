@@ -66,11 +66,11 @@ cat ~/.ssh/id_rsa.pub | ssh user@host 'cat >> .ssh/authorized_keys'
 
 ### Host specific config
 
-[https://linuxize.com/post/using-the-ssh-config-file/]
+https://linuxize.com/post/using-the-ssh-config-file/
 
 ### Using ssh agent
 
-[https://dev.to/levivm/how-to-use-ssh-and-ssh-agent-forwarding-more-secure-ssh-2c32]
+https://dev.to/levivm/how-to-use-ssh-and-ssh-agent-forwarding-more-secure-ssh-2c32
 
 ### Port forwarding
 
@@ -161,4 +161,4 @@ traceroute google.cz
 dig +short myip.opendns.com @resolver1.opendns.com
 ```
 
-From [http://unix.stackexchange.com/questions/22615/how-can-i-get-my-external-ip-address-in-bash]
+From http://unix.stackexchange.com/questions/22615/how-can-i-get-my-external-ip-address-in-bash
