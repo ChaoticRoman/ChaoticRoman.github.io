@@ -8,7 +8,7 @@ E-mail: [roman.pavelka.asi@gmail.com](mailto:roman.pavelka.asi@gmail.com)
 Github: [ChaoticRoman](https://github.com/ChaoticRoman)  
 LinkedIn: [Roman Pavelka](https://www.linkedin.com/in/roman-pavelka-b721339b/)  
 IČO: 10763589  
-Číslo účtu: 1026116241/6100 (Equbank)  
+Číslo účtu: 1026116241/6100 (Equa bank)  
 [CV in English \[Google doc\]](https://docs.google.com/document/d/1chWjWus-AKZ4OC9tiD6cijwMMeaZSnZuHH4SbBLnbwY)  
 [CV in Czech \[Google doc\]](https://docs.google.com/document/d/1kjOD4RH9kXEZwlxmo9bSw1o4J6N0vOD-g8OP7KHNMnA)  
 [Picture of me \[JPEG\]](rpavelka.jpg)  
