@@ -29,3 +29,6 @@ XCH wallet: xch1nqw477dvxqm89dem92rxsgapyxc7203mwft8gpzxujkasvkej3fsvk0wnj
 <a href='law'>Law / <span lang='cs'>Zákony</span> [in czech]</a><br>
 <a href='fireshow'>Fireshow</a><br>
 <a href='android'>Android</a><br>
+<a href='fluxgate.pdf'>Bachelor thesis [PDF]</a>,
+<a href='Review_Roman_Pavelka.pdf'>review by supervisor [PDF]</a>,
+<a href='Roman_bw.pdf'>oponnent review [PDF]</a><br>
