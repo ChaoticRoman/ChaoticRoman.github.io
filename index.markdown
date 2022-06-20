@@ -15,6 +15,10 @@ XCH wallet: xch1nqw477dvxqm89dem92rxsgapyxc7203mwft8gpzxujkasvkej3fsvk0wnj
 [CV in English \[Google doc\]](https://docs.google.com/document/d/1chWjWus-AKZ4OC9tiD6cijwMMeaZSnZuHH4SbBLnbwY)  
 [CV in Czech \[Google doc\]](https://docs.google.com/document/d/1kjOD4RH9kXEZwlxmo9bSw1o4J6N0vOD-g8OP7KHNMnA)  
 [Picture of me \[JPEG\]](rpavelka.jpg)  
+[Bachelor thesis \[PDF\]](fluxgate.pdf),
+[review by supervisor \[PDF\]](Review_Roman_Pavelka.pdf),
+[oponnent review \[PDF\]](Roman_bw.pdf)  
+[Bachelor degree diploma \[PDF\]](diplom.pdf), [diploma supplement \[PDF\]](dodatek.pdf)  
 
 ## Topics
 
@@ -29,6 +33,3 @@ XCH wallet: xch1nqw477dvxqm89dem92rxsgapyxc7203mwft8gpzxujkasvkej3fsvk0wnj
 <a href='law'>Law / <span lang='cs'>Zákony</span> [in czech]</a><br>
 <a href='fireshow'>Fireshow</a><br>
 <a href='android'>Android</a><br>
-<a href='fluxgate.pdf'>Bachelor thesis [PDF]</a>,
-<a href='Review_Roman_Pavelka.pdf'>review by supervisor [PDF]</a>,
-<a href='Roman_bw.pdf'>oponnent review [PDF]</a><br>
