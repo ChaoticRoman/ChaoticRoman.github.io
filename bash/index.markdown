@@ -53,3 +53,27 @@ alias listAllContainers='docker container ls -as'
 alias killAllContainers='docker kill $(docker ps -q)'
 alias removeAllContainers='docker rm $(docker ps -a -q)'
 </pre>
+
+## Git aware prompt
+
+Download official script
+
+```
+wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -O ~/.git-prompt.sh
+```
+
+and replace your prompt setting code in `.bashrc` with
+
+```
+GIT_PS1_SHOWDIRTYSTATE=1
+GIT_PS1_SHOWSTASHSTATE=1
+GIT_PS1_SHOWCOLORHINTS=1
+GIT_PS1_SHOWUNTRACKEDFILES=1
+GIT_PS1_SHOWUPSTREAM="verbose"
+source ~/.git-prompt.sh
+if [ "$color_prompt" = yes ]; then
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$(__git_ps1 " (%s)")\$ '
+else
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(__git_ps1 " (%s)")\$ '
+fi
+```
