@@ -1,5 +1,7 @@
 # Kurzy
 
+[Agilní vývoj a testování](./agile-dev)
+
 [Linux - pokročilá administrace \[Google Slides\]](https://docs.google.com/presentation/d/1i5pyaBdSYGpFD03FBKIdAnPcOgDiT1SCZ6GU9wbse8U)
 [\[PDF\]](<Linux - pokročilá administrace.pdf>)
 
