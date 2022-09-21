@@ -4,9 +4,12 @@
 
 [Lekce 2: Moderní metody softwarového inženýrství - CI/CD, Git, GitLab, Jenkins, Docker, Twelve-Factor App methodology][2]
 
+[Lekce 3: Dokumentace, Markdown, Confluence, Jira][3]
+
 [Poznámky][notes]
 
 
 [1]: https://docs.google.com/presentation/d/1jarsSX6Y06euL82Qpip927ysKcTnw3uyAKyi5ML2jkk/edit?usp=sharing
 [2]: https://docs.google.com/presentation/d/1-z14O9iHAC_CYO9qUc56j6meOxCQsJX8jAzS97-1iVs/edit?usp=sharing
+[3]: https://docs.google.com/presentation/d/1fcFrvIqtr6vZVgLyrS6fGroBgAqGmMo2h2OXdaDqpXM/edit?usp=sharing
 [notes]: https://docs.google.com/document/d/1ZxgyXuPLukwg9MU6FdrMunMHNqlYjGF_DxOE_qO0QfA/edit?usp=sharing
