@@ -10,6 +10,8 @@
 
 [Lekce 5: Separace UI od zbytku aplikace, testování UI - Client/server, frontend/backend, Selenium][5]
 
+[Lekce 6: Lekce 6: REST API a jeho testování: Principy REST, formát JSON, Postman][6]
+
 [Poznámky][notes]
 
 
@@ -18,4 +20,5 @@
 [3]: https://docs.google.com/presentation/d/1fcFrvIqtr6vZVgLyrS6fGroBgAqGmMo2h2OXdaDqpXM/edit?usp=sharing
 [4]: https://docs.google.com/presentation/d/1ZYw1SK_hC3OxK4_GTBYdJVNpcgIs0ckJQdjNqzEgmnM/edit?usp=sharing
 [5]: https://docs.google.com/presentation/d/1gaovMyLXs0Abk1nYNRU-rv6vRSpF35daUDPs7uD9cdA/edit?usp=sharing
+[6]: https://docs.google.com/presentation/d/1LIPs1tVMk8xhoY4wVnpEz_iIgZAqaBpHamveY7UOpi4/edit?usp=sharing
 [notes]: https://docs.google.com/document/d/1ZxgyXuPLukwg9MU6FdrMunMHNqlYjGF_DxOE_qO0QfA/edit?usp=sharing
