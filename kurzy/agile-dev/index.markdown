@@ -14,6 +14,8 @@
 
 [Lekce 7: SOAP protokol a jeho testování - Principy SOAP, formát XML, SoapUI][7]
 
+[Lekce 8: Perzistentní ukládání dat: Databáze a jejich typy, Základy SQL, Úskalí testování komponent pro uchovávání dat][8]
+
 [Poznámky][notes]
 
 
@@ -24,4 +26,5 @@
 [5]: https://docs.google.com/presentation/d/1gaovMyLXs0Abk1nYNRU-rv6vRSpF35daUDPs7uD9cdA/edit?usp=sharing
 [6]: https://docs.google.com/presentation/d/1LIPs1tVMk8xhoY4wVnpEz_iIgZAqaBpHamveY7UOpi4/edit?usp=sharing
 [7]: https://docs.google.com/presentation/d/1HHprkISLx2gMjR2XEyA6vJ0WSIZHf2CpXzDkXdQk9PI/edit?usp=sharing
+[8]: https://docs.google.com/presentation/d/1ngh2cHJh51Axcg9_LO-GTCc6vzxON6cNCvBLiFnAlOI/edit?usp=sharing
 [notes]: https://docs.google.com/document/d/1ZxgyXuPLukwg9MU6FdrMunMHNqlYjGF_DxOE_qO0QfA/edit?usp=sharing
