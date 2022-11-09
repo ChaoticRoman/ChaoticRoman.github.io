@@ -20,6 +20,7 @@ XCH wallet: xch1nqw477dvxqm89dem92rxsgapyxc7203mwft8gpzxujkasvkej3fsvk0wnj
 [review by supervisor \[PDF\]](Review_Roman_Pavelka.pdf),
 [oponnent review \[PDF\]](Roman_bw.pdf)  
 [Bachelor degree diploma \[PDF\]](diplom.pdf), [diploma supplement \[PDF\]](dodatek.pdf)  
+[Sizes](sizes)  
 
 ## Topics
 
