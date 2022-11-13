@@ -1,5 +1,7 @@
 # Sizes
 
+Chest-waist-hip: 102-63-96 
+
 ## Shoes
 
 * Noname, UK 9, EUR 44: bottom limit but still fine
@@ -8,11 +10,10 @@
 ## Socks
 
 * FILA 39-42: perfect
-* Russel Athletic 35-38: litte bit too small but fine
+* Russel Athletic 35-38: litte bit small but fine
 
 ## Boxers
 
-* My waist is around 92 cm
 * F&F Boxers Hipsters M 84-89 cm: uncomfortably small but wearable
 
 ## Trousers
