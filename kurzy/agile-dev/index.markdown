@@ -18,6 +18,8 @@
 
 [Lekce 9: Unit testy, integrační testy a akceptační testy - Typy testů, hodnota testu, testovací pyramida, regresní testy, automatizace][9]
 
+[Lekce 10: Management QE - Testovací plán, proces testování, test analýza][10]
+
 [Poznámky][notes]
 
 
@@ -30,4 +32,5 @@
 [7]: https://docs.google.com/presentation/d/1HHprkISLx2gMjR2XEyA6vJ0WSIZHf2CpXzDkXdQk9PI/edit?usp=sharing
 [8]: https://docs.google.com/presentation/d/1ngh2cHJh51Axcg9_LO-GTCc6vzxON6cNCvBLiFnAlOI/edit?usp=sharing
 [9]: https://docs.google.com/presentation/d/1yeo9CLplA5y6duQew9UWYWjPNJFQSWqQ5uQpuyzmzrA/edit?usp=sharing
+[10]: https://docs.google.com/presentation/d/1XlwxmIdm0KCPf6AlBrSZKpRMwEPzEB2nJYOkJO3WGSI/edit?usp=sharing
 [notes]: https://docs.google.com/document/d/1ZxgyXuPLukwg9MU6FdrMunMHNqlYjGF_DxOE_qO0QfA/edit?usp=sharing
