@@ -20,6 +20,10 @@ Acetylcysteinum: ACC LONG (600 mg, works: mucolytic)
 
 Butamirati citras: Sinecod (50 mg, works)
 
+* use long-effect gradual-effect pills (8 - 12 hours)
+* maximum 3 days
+* Do NOT use with mucoactive agents!
+
 ## Decongestants
 
 Xylometatazoline: Otrivin (1 mg/1 ml, works)
