@@ -35,3 +35,4 @@ XCH wallet: xch1nqw477dvxqm89dem92rxsgapyxc7203mwft8gpzxujkasvkej3fsvk0wnj
 <a href='law'>Law / <span lang='cs'>Zákony</span> [in czech]</a><br>
 <a href='fireshow'>Fireshow</a><br>
 <a href='android'>Android</a><br>
+[Organization of small and medium sized Python projects, presentation slides \[PDF\]](pyvo.pdf)  
