@@ -11,7 +11,7 @@ Stack Overflow: [Roman Pavelka](https://stackoverflow.com/users/12118546/roman-p
 IČO: 10763589  
 DIČ: CZ8805267801  
 Důchodové pojištění (variabilní symbol): 75664501  
-Číslo účtu: [1026116241/6100 (Equa bank)](qr.png)  
+Číslo účtu: [1026116241/5500 (Raiffeisenbank)](qr.png)  
 XCH wallet: xch1nqw477dvxqm89dem92rxsgapyxc7203mwft8gpzxujkasvkej3fsvk0wnj  
 [CV in English \[Google doc\]](https://docs.google.com/document/d/1chWjWus-AKZ4OC9tiD6cijwMMeaZSnZuHH4SbBLnbwY)  
 [CV in Czech \[Google doc\]](https://docs.google.com/document/d/1kjOD4RH9kXEZwlxmo9bSw1o4J6N0vOD-g8OP7KHNMnA)  
