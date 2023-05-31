@@ -8,7 +8,7 @@ E-mail: [roman.pavelka.asi@gmail.com](mailto:roman.pavelka.asi@gmail.com)
 Github: [ChaoticRoman](https://github.com/ChaoticRoman)  
 LinkedIn: [Roman Pavelka](https://www.linkedin.com/in/roman-pavelka-b721339b/)  
 Stack Overflow: [Roman Pavelka](https://stackoverflow.com/users/12118546/roman-pavelka)  
-IČO: 10763589  
+IČO: [10763589](zivnost.pdf)  
 DIČ: CZ8805267801  
 Důchodové pojištění (variabilní symbol): 75664501  
 Číslo účtu: [1026116241/5500 (Raiffeisenbank)](qr.png)  
