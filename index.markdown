@@ -3,6 +3,7 @@ title: romanpavelka.cz
 description: personal webpage
 ---
 
+[Short bio](https://github.com/ChaoticRoman/ChaoticRoman/blob/main/README.md)  
 Phone number: [+420 736 452 265](tel:+420736452265)  
 E-mail: [roman.pavelka.asi@gmail.com](mailto:roman.pavelka.asi@gmail.com)  
 Github: [ChaoticRoman](https://github.com/ChaoticRoman)  
