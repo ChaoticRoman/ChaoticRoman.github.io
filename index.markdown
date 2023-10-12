@@ -49,8 +49,8 @@ function init() {
     renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setClearColor(0x000000); // Black background
-    document.body.appendChild(renderer.domElement);
 
+    document.body.appendChild(renderer.domElement);
     renderer.domElement.style.position = "absolute";
     renderer.domElement.style.top = "0";
     renderer.domElement.style.left= "0";
@@ -74,7 +74,7 @@ function init() {
     points = new THREE.Points(geometry, material);
     scene.add(points);
 
-    camera.position.z = 20;
+    camera.position.z = 5;
 
     animate();
 }
