@@ -37,3 +37,59 @@ XCH wallet: xch1nqw477dvxqm89dem92rxsgapyxc7203mwft8gpzxujkasvkej3fsvk0wnj
 <a href='fireshow'>Fireshow</a><br>
 <a href='android'>Android</a><br>
 [Organization of small and medium sized Python projects, presentation slides \[PDF\]](pyvo.pdf)  
+
+
+<script src="https://threejs.org/build/three.js"></script>
+<script>
+let scene, camera, renderer, points, geometry, material;
+
+function init() {
+    scene = new THREE.Scene();
+    camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setClearColor(0x000000); // Black background
+    document.body.appendChild(renderer.domElement);
+
+    geometry = new THREE.BufferGeometry();
+    const vertices = [];
+    const numPoints = 1000;
+
+    // Generate random points
+    for (let i = 0; i < numPoints; i++) {
+        vertices.push((Math.random() - 0.5) * 10); // x
+        vertices.push((Math.random() - 0.5) * 10); // y
+        vertices.push((Math.random() - 0.5) * 10); // z
+    }
+
+    geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+
+    material = new THREE.PointsMaterial({ color: 0xFFFFFF, size: 0.01 });
+
+    points = new THREE.Points(geometry, material);
+    scene.add(points);
+
+    camera.position.z = 20;
+
+    animate();
+}
+
+function animate() {
+    requestAnimationFrame(animate);
+
+    points.rotation.x += 0.001;
+    points.rotation.y += 0.001;
+
+    renderer.render(scene, camera);
+}
+
+window.addEventListener('resize', function() {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    renderer.setSize(width, height);
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+});
+
+init();
+</script>
