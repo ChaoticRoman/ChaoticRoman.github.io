@@ -7,6 +7,7 @@ description: personal webpage
 Phone number: [+420 736 452 265](tel:+420736452265)  
 E-mail: [roman.pavelka.asi@gmail.com](mailto:roman.pavelka.asi@gmail.com)  
 Github: [ChaoticRoman](https://github.com/ChaoticRoman)  
+Codewars: [ChaoticRoman](https://www.codewars.com/users/ChaoticRoman/)  
 LinkedIn: [Roman Pavelka](https://www.linkedin.com/in/roman-pavelka-b721339b/)  
 <a rel="me" href="https://toot.cat/@ChaoticRoman">Mastodon</a>: @ChaoticRoman@toot.cat  
 Stack Overflow: [Roman Pavelka](https://stackoverflow.com/users/12118546/roman-pavelka)  
