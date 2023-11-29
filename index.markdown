@@ -54,7 +54,7 @@ function init() {
     renderer.setClearColor(0x000000); // Black background
 
     document.body.appendChild(renderer.domElement);
-    renderer.domElement.style.position = "absolute";
+    renderer.domElement.style.position = "fixed";
     renderer.domElement.style.top = "0";
     renderer.domElement.style.left= "0";
     renderer.domElement.style.zIndex= "-1";
