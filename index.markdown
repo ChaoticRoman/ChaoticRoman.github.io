@@ -39,8 +39,7 @@ XCH wallet: xch1nqw477dvxqm89dem92rxsgapyxc7203mwft8gpzxujkasvkej3fsvk0wnj
 <a href='law'>Law / <span lang='cs'>Zákony</span> [in czech]</a><br>
 <a href='fireshow'>Fireshow</a><br>
 <a href='android'>Android</a><br>
-[Organization of small and medium sized Python projects, presentation slides \[PDF\]](pyvo.pdf)  
-
+[Talks]  
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.157.0/three.min.js" integrity="sha512-nogdM20cZX4FjsqU5H5ecK3vw8LjYN1AcUUWi7asLUVP3eJK5wldywvqFMW8CLd5/xoiJaIL3eXG82SlOWZkTA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
