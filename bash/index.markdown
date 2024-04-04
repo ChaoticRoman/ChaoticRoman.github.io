@@ -77,3 +77,12 @@ else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(__git_ps1 " (%s)")\$ '
 fi
 ```
+
+Note: Original prompt setting to be replaced look like something like:
+```
+if [ "$color_prompt" = yes ]; then
+    PS1=...
+else
+    PS1=...
+fi
+```
