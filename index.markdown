@@ -35,6 +35,7 @@ XCH wallet: xch1nqw477dvxqm89dem92rxsgapyxc7203mwft8gpzxujkasvkej3fsvk0wnj
 <a href='net'>Networking</a><br>
 <a href='bash'>Bash</a><br>
 <a href='python'>Python</a><br>
+<a href='https://docs.google.com/document/d/1W1aMNxZPDd-WU3nlgR1IhdaA8_xT7ny_1L0nCaL7Iy8'>C tricks [Google doc]</a><br>
 <a href='https://docs.google.com/document/d/1_MJSi8OFwptRwPrKsqrWDVxT5rG6KoHWJWzKFEDcVgE'>C++ tricks [Google doc]</a><br>
 <a href='https://docs.google.com/document/d/1R2KTPmzWfuTrcC5v-jNdfptanTI2-d7Hwm4SZE9hlhk'>Qt tricks [Google doc]</a><br>
 <a href='law'>Law / <span lang='cs'>Zákony</span> [in czech]</a><br>
