@@ -6,14 +6,13 @@ description: personal webpage
 [Short bio](https://github.com/ChaoticRoman/ChaoticRoman/blob/main/README.md)  
 Phone number: [+420 736 452 265](tel:+420736452265)  
 E-mail: [roman.pavelka.asi@gmail.com](mailto:roman.pavelka.asi@gmail.com)  
-Datová schránka: f7ke9m  
+Datová schránka ID/user: 2553e5i / f7ke9m  
 Github: [ChaoticRoman](https://github.com/ChaoticRoman)  
 Codewars: [ChaoticRoman](https://www.codewars.com/users/ChaoticRoman/)  
 LinkedIn: [Roman Pavelka](https://www.linkedin.com/in/roman-pavelka-b721339b/)  
 Mastodon: [@ChaoticRoman@toot.cat](https://toot.cat/@ChaoticRoman)  
 Stack Overflow: [Roman Pavelka](https://stackoverflow.com/users/12118546/roman-pavelka)  
-IČO: [10763589](zivnost.pdf)  
-DIČ: CZ8805267801  
+IČO: [10763589](zivnost.pdf) (suspended)  
 Důchodové pojištění (variabilní symbol): 75664501  
 Číslo účtu: [1026116241/5500 (Raiffeisenbank)](qr.png)  
 IBAN: CZ6655000000001026116241  
