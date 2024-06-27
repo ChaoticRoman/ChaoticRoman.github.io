@@ -2,6 +2,10 @@
 
 ## 2024
 
+* [APIs to various LLMs and their comparison](https://docs.google.com/presentation/d/19KKScwPHR6-bXQs4iZ1-82vop-B8z_PxYvVreeTggV8)
+    * [Brno Pyvo](https://pyvo.cz/brno-pyvo/2024-06/), 2024-06-27
+* [CLI to OpenAI GPT models](https://docs.google.com/presentation/d/1RP7DUoOIfSyAKScDZAeFr3nSAyHB7LShEEoB8QcZf3g)
+    * [Prague Python Pizza](https://prague.python.pizza/), 2024-02-24
 * [C++ Dependency Management](cppdeps.md)
     * [C++ Brno vol.2](https://www.meetup.com/cppbrno/events/297396094/), 2024-01-31
 
