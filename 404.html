@@ -18,8 +18,64 @@ layout: default
 </style>
 
 <div class="container">
-  <h1>404</h1>
+  <h1>404 - Page Not Found</h1>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+  <p id="quote"></p>
+
+  <script>
+      const quotes = [
+          // Bible-inspired quotes
+          "“And lo, the path you seek is not here. For the page you desire has wandered into the wilderness.” – The Book of Lost URLs",
+          "“Yea, though I walk through the valley of the shadow of 404, I shall fear no broken link.” – Psalm of the Lost Pages",
+          "“For wide is the gate and broad is the road that leads to 404, and many enter through it.” – The Gospel of Broken Links",
+          "“Seek, and ye shall not find... for this page is no more.” – The Gospel of Missing Pages",
+          
+          // Movie-inspired quotes
+          "“You’re in the wrong place, kid.” – Han Solo, probably",
+          "“404. The page you were looking for has gone to a galaxy far, far away.” – Obi-Wan Kenobi, maybe",
+          "“I’m sorry, Dave. I’m afraid I can’t find that page.” – HAL 9000",
+          "“You either die a hero, or you live long enough to see yourself become a 404 error.” – Harvey Dent",
+          "“404. The page you seek does not exist. But what you find may be greater than what you sought.” – Morpheus",
+          "“404. The page you were looking for is not here. But it’s not the page you deserve, it’s the page you need right now.” – Batman",
+          
+          // Over-the-top tough quotes
+          "“You’ve wandered into the digital wasteland. There is no turning back now.”",
+          "“The page you seek is lost, like a lone wolf howling into the void.”",
+          "“You’ve strayed from the path, and now you must face the consequences of the 404.”",
+          "“In the harsh desert of the internet, only the strong survive. You, my friend, have found nothing but sand.”",
+          "“The page you seek is like a mirage in the desert. It was never real to begin with.”",
+          "“You’ve reached the end of the internet. There is nothing left for you here.”",
+          "“The page you seek is like a shadow in the night. Elusive. Unreachable. Gone.”",
+          "“You’ve ventured into the abyss, and the abyss has returned a 404.”",
+          "“The page you seek is lost, like a ship adrift in the stormy seas of the internet.”",
+          "“You’ve entered the void. There is no page here. Only darkness.”",
+          
+          // Philosophical and comically serious
+          "“To be lost is to be found, but not here. Definitely not here.”",
+          "“In the grand scheme of the universe, this page was never meant to be.”",
+          "“The page you seek is like time itself – fleeting, intangible, and forever out of reach.”",
+          "“The page you seek is like a dream. It was never real, and now it’s gone.”",
+          "“You’ve reached the edge of the internet. Beyond this point, there is only chaos.”",
+          "“The page you seek is like a whisper in the wind. You’ll never catch it.”",
+          "“In the labyrinth of the internet, you have taken a wrong turn. There is no escape.”",
+          "“The page you seek is like a star in the night sky. Distant. Unreachable. Gone.”",
+          "“You’ve wandered into the void, where pages go to die.”",
+          "“The page you seek is like a fleeting thought. It was here, and now it’s gone.”"
+      ];
+
+      // Function to pick a random quote
+      function getRandomQuote() {
+          const randomIndex = Math.floor(Math.random() * quotes.length);
+          return quotes[randomIndex];
+      }
+
+      // Display the random quote in the HTML
+      document.getElementById('quote').innerText = getRandomQuote();
+  </script>
+  <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.157.0/three.min.js"
+      integrity="sha512-nogdM20cZX4FjsqU5H5ecK3vw8LjYN1AcUUWi7asLUVP3eJK5wldywvqFMW8CLd5/xoiJaIL3eXG82SlOWZkTA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"
+  ></script>
+  <script src="https://romanpavelka.cz/bg.js"></script>
 </div>
