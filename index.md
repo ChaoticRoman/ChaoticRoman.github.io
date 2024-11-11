@@ -3,7 +3,7 @@ title: romanpavelka.cz
 description: personal webpage
 ---
 
-[Short bio](https://github.com/ChaoticRoman/ChaoticRoman/blob/main/README.md)  
+[Short bio](bio)  
 Phone number: [+420 736 452 265](tel:+420736452265)  
 E-mail: [roman.pavelka.asi@gmail.com](mailto:roman.pavelka.asi@gmail.com)  
 Datová schránka ID/user: 2553e5i / f7ke9m  
@@ -28,17 +28,17 @@ XCH wallet: xch1nqw477dvxqm89dem92rxsgapyxc7203mwft8gpzxujkasvkej3fsvk0wnj
 
 ## Topics
 
-<a href='kurzy'>Kurzy</a><br>
+(kurzy)[Kurzy]  
 [AVR8 development on GNU/Linux tutorial](avr)  
-<a href='kicad'>KiCad</a><br>
-<a href='pi'>Raspberry Pi</a><br>
-<a href='net'>Networking</a><br>
-<a href='bash'>Bash</a><br>
-<a href='https://docs.google.com/document/d/15JE7VvGXdR9_72hDNddUwnw-mOFgzNM7eUFvRmngT7Q'>Python tricks [Google doc]</a><br>
-<a href='https://docs.google.com/document/d/1W1aMNxZPDd-WU3nlgR1IhdaA8_xT7ny_1L0nCaL7Iy8'>C tricks [Google doc]</a><br>
-<a href='https://docs.google.com/document/d/1_MJSi8OFwptRwPrKsqrWDVxT5rG6KoHWJWzKFEDcVgE'>C++ tricks [Google doc]</a><br>
-<a href='https://docs.google.com/document/d/1R2KTPmzWfuTrcC5v-jNdfptanTI2-d7Hwm4SZE9hlhk'>Qt tricks [Google doc]</a><br>
-<a href='law'>Law / <span lang='cs'>Zákony</span> [in czech]</a><br>
-<a href='fireshow'>Fireshow</a><br>
-<a href='android'>Android</a><br>
+(kicad)[KiCad]  
+(pi)[Raspberry Pi]  
+(net)[Networking]  
+(bash)[Bash]  
+[Python tricks \[Google doc\]](https://docs.google.com/document/d/15JE7VvGXdR9_72hDNddUwnw-mOFgzNM7eUFvRmngT7Q)  
+[C tricks \[Google doc\]](https://docs.google.com/document/d/1W1aMNxZPDd-WU3nlgR1IhdaA8_xT7ny_1L0nCaL7Iy8)  
+[C++ tricks \[Google doc\]](https://docs.google.com/document/d/1_MJSi8OFwptRwPrKsqrWDVxT5rG6KoHWJWzKFEDcVgE)  
+[Qt tricks \[Google doc\]](https://docs.google.com/document/d/1R2KTPmzWfuTrcC5v-jNdfptanTI2-d7Hwm4SZE9hlhk)  
+[Zákony (in czech)](law)  
+[Fireshow](fireshow)  
+[Android](android)  
 [Talks](talks)  
