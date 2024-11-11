@@ -28,12 +28,12 @@ XCH wallet: xch1nqw477dvxqm89dem92rxsgapyxc7203mwft8gpzxujkasvkej3fsvk0wnj
 
 ## Topics
 
-(kurzy)[Kurzy]  
+[Kurzy](kurzy)  
 [AVR8 development on GNU/Linux tutorial](avr)  
-(kicad)[KiCad]  
-(pi)[Raspberry Pi]  
-(net)[Networking]  
-(bash)[Bash]  
+[KiCad](kicad)  
+[Raspberry Pi](pi)  
+[Networking](net)  
+[Bash](bash)  
 [Python tricks \[Google doc\]](https://docs.google.com/document/d/15JE7VvGXdR9_72hDNddUwnw-mOFgzNM7eUFvRmngT7Q)  
 [C tricks \[Google doc\]](https://docs.google.com/document/d/1W1aMNxZPDd-WU3nlgR1IhdaA8_xT7ny_1L0nCaL7Iy8)  
 [C++ tricks \[Google doc\]](https://docs.google.com/document/d/1_MJSi8OFwptRwPrKsqrWDVxT5rG6KoHWJWzKFEDcVgE)  
