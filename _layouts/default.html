@@ -28,8 +28,15 @@
     </div>
 
     <div style="position: fixed; bottom: 25px; right: 25px; width: 400px; text-align:right; font-style:italic;">
-        Roman Pavelka, 2020
+        Roman Pavelka, <script>document.write(new Date().getFullYear())</script>
     </div>
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.157.0/three.min.js"
+        integrity="sha512-nogdM20cZX4FjsqU5H5ecK3vw8LjYN1AcUUWi7asLUVP3eJK5wldywvqFMW8CLd5/xoiJaIL3eXG82SlOWZkTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"
+    ></script>
+    <script src="bg.js"></script>
 
     {% if site.google_analytics %}
       <script>

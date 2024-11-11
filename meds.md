@@ -28,6 +28,8 @@ Butamirati citras: Sinecod (50 mg, works)
 
 Xylometatazoline: Otrivin (1 mg/1 ml, works)
 
+<!--
 ## Skin problems
 
 Acidum salicylicum, Fluorouracil: Verrumal (5 mg/g, 100 mg/g, warts removal)
+-->
