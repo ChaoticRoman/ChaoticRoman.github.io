@@ -14,7 +14,7 @@ Mastodon: [@ChaoticRoman@toot.cat](https://toot.cat/@ChaoticRoman)
 Stack Overflow: [Roman Pavelka](https://stackoverflow.com/users/12118546/roman-pavelka)  
 IČO: [10763589](zivnost.pdf) (suspended)  
 Důchodové pojištění (variabilní symbol): 75664501  
-Číslo účtu: [1026116241/5500 (Raiffeisenbank)](qr.png)  
+Číslo účtu: [1026116241/5500 (Raiffeisenbank)](qr)  
 IBAN: CZ6655000000001026116241  
 XCH wallet: xch1nqw477dvxqm89dem92rxsgapyxc7203mwft8gpzxujkasvkej3fsvk0wnj  
 [CV in English \[Google doc\]](https://docs.google.com/document/d/1chWjWus-AKZ4OC9tiD6cijwMMeaZSnZuHH4SbBLnbwY)  
