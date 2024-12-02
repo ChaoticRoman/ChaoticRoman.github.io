@@ -12,5 +12,6 @@
 
 .account-number:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 </style>
