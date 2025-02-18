@@ -2,7 +2,7 @@
 
 ## Fever
 
-Paracetamol: Paralen 500 mg (pain and fever)
+Paracetamol: Paralen 500 mg, Coldrex (500, 750, 1000 mg) (pain and fever)
 
 Ibuprofenum: Brufen 400 (pain, fever, and inflammation)
 
