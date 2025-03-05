@@ -12,7 +12,7 @@ Codewars: [ChaoticRoman](https://www.codewars.com/users/ChaoticRoman/)
 LinkedIn: [Roman Pavelka](https://www.linkedin.com/in/roman-pavelka-b721339b/)  
 Mastodon: [@ChaoticRoman@toot.cat](https://toot.cat/@ChaoticRoman)  
 Stack Overflow: [Roman Pavelka](https://stackoverflow.com/users/12118546/roman-pavelka)  
-IČO: [10763589](zivnost.pdf) (suspended)  
+IČO: [10763589](zivnost.pdf)  
 Důchodové pojištění (variabilní symbol): 75664501  
 Číslo účtu: [1026116241/5500 (Raiffeisenbank)](qr)  
 IBAN: CZ6655000000001026116241  
