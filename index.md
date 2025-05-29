@@ -19,7 +19,7 @@ IBAN: CZ6655000000001026116241
 XCH wallet: xch1nqw477dvxqm89dem92rxsgapyxc7203mwft8gpzxujkasvkej3fsvk0wnj  
 [CV in English \[Google doc\]](https://docs.google.com/document/d/1chWjWus-AKZ4OC9tiD6cijwMMeaZSnZuHH4SbBLnbwY)  
 [CV in Czech \[Google doc\]](https://docs.google.com/document/d/1kjOD4RH9kXEZwlxmo9bSw1o4J6N0vOD-g8OP7KHNMnA)  
-[Picture of me \[JPEG\]](rpavelka.jpg)  
+[Picture of me \[JPEG\]](rpavelka-cpp.jpeg)  
 [Bachelor thesis \[PDF\]](fluxgate.pdf),
 [review by supervisor \[PDF\]](Review_Roman_Pavelka.pdf),
 [oponnent review \[PDF\]](Roman_bw.pdf)  
