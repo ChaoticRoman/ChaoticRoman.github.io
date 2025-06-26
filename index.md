@@ -47,7 +47,7 @@ XCH wallet: xch1nqw477dvxqm89dem92rxsgapyxc7203mwft8gpzxujkasvkej3fsvk0wnj
 
 Below is a list of organizations I proudly support through financial contributions or hands-on volunteering.
 
-[<img alt="UNITED24" src=" supporting/united24.svg" height="100">](https://u24.gov.ua/)
+[<img alt="UNITED24" src=" supporting/president_ua.svg" height="100"> <img alt="UNITED24" src=" supporting/united24.svg" height="50">](https://u24.gov.ua/)
 [<img alt="Nadační fond pro Ukrajinu" src="supporting/darek.svg" height="100">](https://www.zbraneproukrajinu.cz/)
 [<img alt="Aerorozvědka z.s." src="supporting/aerorozvedka.svg" height="100">](https://aerorozvedka.cz/)
 [<img alt="AstroPI Hackathon" src="supporting/astropi.png" height="100">](https://astropi-hackathon.org/)
