@@ -52,4 +52,4 @@ Below is a list of organizations I proudly support through financial contributio
 [<img alt="Aerorozvědka z.s." src="supporting/aerorozvedka.svg" height="100">](https://aerorozvedka.cz/)
 [<img alt="AstroPI Hackathon" src="supporting/astropi.png" height="100">](https://astropi-hackathon.org/)
 [<img alt="Python Software Foundation" src="supporting/psf.png" height="100">](https://www.python.org/psf-landing/)
-[<img alt="Free Software Foundation Europe" src="supporting/fsfe.png" height="100">](https://fsfe.org/)
+[<img alt="Free Software Foundation Europe" src="supporting/fsfe.svg" height="100">](https://fsfe.org/)
