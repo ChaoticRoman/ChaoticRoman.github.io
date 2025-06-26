@@ -49,4 +49,4 @@ Below is a list of organizations I proudly support through financial contributio
 
 [![UNITED24](supporting/united24.svg)](https://u24.gov.ua/)
 [![Nadační fond pro Ukrajinu](supporting/darek.svg)](https://www.zbraneproukrajinu.cz/)
-[![Aerorozvědka z.s.](supporting/aerorozvedka.svg)](https://aerorozvedka.cz/)
+[<img src="/supporting/aerorozvedka.svg" alt="Aerorozvědka z.s." width="100">](https://aerorozvedka.cz/)
