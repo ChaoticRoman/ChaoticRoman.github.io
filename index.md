@@ -45,7 +45,7 @@ XCH wallet: xch1nqw477dvxqm89dem92rxsgapyxc7203mwft8gpzxujkasvkej3fsvk0wnj
 
 ## Support
 
-Below is a list of organizations I proudly support through financial contributions or volunteering.
+Organizations I proudly support through financial contributions and/or volunteering:
 
 [<img alt="UNITED24" src=" supporting/u24.gif" height="100">](https://u24.gov.ua/)
 [<img alt="Nadační fond pro Ukrajinu" src="supporting/darek.svg" height="100">](https://www.zbraneproukrajinu.cz/)
