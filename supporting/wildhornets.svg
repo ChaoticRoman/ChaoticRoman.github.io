@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="Слой_1"
+   data-name="Слой 1"
+   viewBox="0 0 151.15 139.28"
+   version="1.1"
+   sodipodi:docname="wildhornets2.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview11"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="5.822803"
+     inkscape:cx="75.564981"
+     inkscape:cy="69.811738"
+     inkscape:window-width="2494"
+     inkscape:window-height="1371"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Слой_1" />
+  <defs
+     id="defs4">
+    <style
+       id="style2">.cls-1{fill-rule:evenodd;}</style>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Invert"
+       id="filter147"
+       x="0"
+       y="0"
+       width="1"
+       height="1">
+      <feColorMatrix
+         type="hueRotate"
+         values="180"
+         result="color1"
+         id="feColorMatrix143" />
+      <feColorMatrix
+         values="0 0 -1 0 1 0 -1 0 0 1 -1 0 0 0 1 -0.21 -0.72 -0.07 2 0 "
+         result="color2"
+         id="feColorMatrix145" />
+    </filter>
+  </defs>
+  <g
+     id="Слой_2"
+     data-name="Слой 2"
+     style="filter:url(#filter147)">
+    <g
+       id="Слой_1-2"
+       data-name="Слой 1-2">
+      <path
+         class="cls-1"
+         d="M32.05,33V8.71L40.76,0V31.21l8.7,8.71V52.23L37.31,40.07,21,56.36H8.71ZM93,43.53H58.17V60.94l8.7,8.7H84.28L93,60.94ZM66.87,60.94V52.23H84.28v8.71Zm-8.7,8.7h8.7v8.71H84.28V69.64H93v35.12L75.58,122.07,58.17,104.76Zm8.7,17.41H84.28v14.09l-8.7,8.65-8.71-8.65ZM119.1,8.71V33l23.35,23.34H130.14L113.85,40.07,101.69,52.23V39.92l8.71-8.71V0ZM49.46,80.19,29.52,100.13,12.31,82.92H0l23.35,23.34v33l8.7-8.7V109.91L49.46,92.5Zm72.17,19.94L101.69,80.19V92.5l17.41,17.41v20.67l8.71,8.7v-33l23.34-23.34H138.84Z"
+         id="path6" />
+    </g>
+  </g>
+</svg>

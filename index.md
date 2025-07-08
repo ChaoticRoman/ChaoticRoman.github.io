@@ -50,6 +50,8 @@ Organizations I proudly support through financial contributions and/or volunteer
 [<img alt="UNITED24" src=" supporting/u24.gif" height="100">](https://u24.gov.ua/)
 [<img alt="Nadační fond pro Ukrajinu" src="supporting/darek.svg" height="100">](https://www.zbraneproukrajinu.cz/)
 [<img alt="Aerorozvědka z.s." src="supporting/aerorozvedka.svg" height="100">](https://aerorozvedka.cz/)
+[<img alt="Wild Hornets" src="supporting/wildhornets.svg" height="100">](https://wildhornets.com/)
+[<img alt="NAFO" src="supporting/nafo.png" height="100">](https://nafo-ofan.org/)
 [<img alt="AstroPI Hackathon" src="supporting/astropi.png" height="100">](https://astropi-hackathon.org/)
 [<img alt="Python Software Foundation" src="supporting/psf.png" height="100">](https://www.python.org/psf-landing/)
 [<img alt="Free Software Foundation Europe" src="supporting/fsfe.svg" height="100">](https://fsfe.org/)
