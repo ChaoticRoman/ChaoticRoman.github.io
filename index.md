@@ -49,8 +49,8 @@ Organizations I proudly support through financial contributions and/or volunteer
 
 [<img alt="UNITED24" src=" supporting/u24.gif" height="100">](https://u24.gov.ua/)
 [<img alt="Nadační fond pro Ukrajinu" src="supporting/darek.svg" height="100">](https://www.zbraneproukrajinu.cz/)
-[<img alt="Zdravotní zajištění z.s." src="supporting/zdravotnizajisteni.jpg" height="100">](https://zdravotnizajisteni.cz/)
-[<img alt="Mezinárodní Humanitární Nadační fond Perun " src="supporting/perun.jpg" height="100">](https://zdravotnizajisteni.cz/)
+[<img alt="Zdravotní zajištění z.s." src="supporting/zdravotnizajisteni.png" height="100">](https://zdravotnizajisteni.cz/)
+[<img alt="Mezinárodní Humanitární Nadační fond Perun " src="supporting/perun.png" height="100">](https://zdravotnizajisteni.cz/)
 [<img alt="Aerorozvědka z.s." src="supporting/aerorozvedka.svg" height="100">](https://aerorozvedka.cz/)
 [<img alt="Wild Hornets" src="supporting/wildhornets.svg" height="100">](https://wildhornets.com/)
 [<img alt="Third Separate Assault Brigade of the Armed Forces of Ukraine" src="supporting/ab3.svg" height="100">](https://ab3.support/en)
