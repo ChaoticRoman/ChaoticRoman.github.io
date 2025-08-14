@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Fullscreen Counter</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: #fff;
+      color: #000;
+    }
+    body {
+      display: grid;
+      place-items: center;
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+    #value {
+      font-size: 30vmin; /* scales with viewport, stays big on phones/desktops */
+      line-height: 1;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="value">0</div>
+
+  <script>
+    (() => {
+      let value = 0;
+      const el = document.getElementById('value');
+
+      const render = () => { el.textContent = value; };
+
+      const handlePointer = (e) => {
+        // Only primary pointer (left mouse / single touch)
+        if (e.button !== undefined && e.button !== 0) return;
+        const y = e.clientY;
+        const half = window.innerHeight / 2;
+        value += (y < half) ? -1 : 1;
+        render();
+      };
+
+      window.addEventListener('pointerdown', handlePointer, { passive: true });
+      render();
+    })();
+  </script>
+</body>
+</html>
+
