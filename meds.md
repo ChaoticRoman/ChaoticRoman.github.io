@@ -26,7 +26,7 @@ Butamirati citras: Sinecod (50 mg, works)
 
 ## Decongestants
 
-Xylometatazoline: Otrivin (1 mg/1 ml, works)
+Xylometazoline: Otrivin (1 mg/1 ml, works)
 
 <!--
 ## Skin problems
