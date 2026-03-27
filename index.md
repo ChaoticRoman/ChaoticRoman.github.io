@@ -58,6 +58,7 @@ Organizations I proudly support through financial contributions and/or volunteer
 [<img alt="Aerorozvědka z.s." src="supporting/aerorozvedka.svg" height="100">](https://aerorozvedka.cz/)
 [<img alt="Wild Hornets" src="supporting/wildhornets.svg" height="100">](https://wildhornets.com/)
 [<img alt="Third Separate Assault Brigade of the Armed Forces of Ukraine" src="supporting/ab3.svg" height="100">](https://ab3.support/en)
+[<img alt="Front Line Kit" src="supporting/front_line_kit.webp" height="100">](https://frontlinekit.org/)
 [<img alt="NAFO" src="supporting/nafo.png" height="100">](https://nafo-ofan.org/)
 [<img alt="AstroPI Hackathon" src="supporting/astropi.png" height="100">](https://astropi-hackathon.org/)
 [<img alt="Python Software Foundation" src="supporting/psf.png" height="100">](https://www.python.org/psf-landing/)
