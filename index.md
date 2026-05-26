@@ -4,7 +4,8 @@ description: personal webpage
 ---
 
 [Short bio](bio)  
-Phone number: [+420 736 452 265](tel:+420736452265)  
+Phone number CZ: [+420 736 452 265](tel:+420736452265)  
+Phone number AU: [+61 493 827 875](tel:+61493827875)  
 E-mail: [roman.pavelka.asi@gmail.com](mailto:roman.pavelka.asi@gmail.com)  
 Datová schránka ID/user: 2553e5i / f7ke9m  
 Github: [ChaoticRoman](https://github.com/ChaoticRoman)  
