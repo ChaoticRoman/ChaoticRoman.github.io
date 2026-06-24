@@ -5,114 +5,433 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Click Sound Timer</title>
   <style>
+    :root {
+      --bg: #14161a;
+      --surface: #1e2228;
+      --text: #e8eaed;
+      --muted: #9aa0a6;
+      --accent: #4f9cff;
+      --stop: #e0533d;
+      --track: #2c313a;
+      --border: #2c313a;
+      --shadow: rgba(0, 0, 0, 0.45);
+    }
+    body.light {
+      --bg: #f5f6f8;
+      --surface: #ffffff;
+      --text: #1b1f24;
+      --muted: #5f6368;
+      --accent: #1a73e8;
+      --stop: #d93025;
+      --track: #e3e6eb;
+      --border: #dbdfe5;
+      --shadow: rgba(0, 0, 0, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+
     body {
-      font-family: Arial, sans-serif;
-      max-width: 600px;
-      margin: 40px auto;
-      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      max-width: 560px;
+      margin: 0 auto;
+      padding: 24px 20px 56px;
       line-height: 1.5;
+      background: var(--bg);
+      color: var(--text);
+      transition: background .25s ease, color .25s ease;
     }
 
-    label, input, button {
-      font-size: 1rem;
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
     }
 
-    input {
-      width: 80px;
-      padding: 6px;
-      margin: 0 8px;
+    h1 { font-size: 1.4rem; margin: 0; }
+
+    p.intro { color: var(--muted); margin: 12px 0 0; }
+
+    .theme-toggle {
+      flex: none;
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      font-size: 1.15rem;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      transition: background .25s ease, border-color .25s ease;
+    }
+    .theme-toggle:hover { border-color: var(--accent); }
+
+    /* ---- Cycle dial ---- */
+    .dial {
+      position: relative;
+      width: 230px;
+      height: 230px;
+      margin: 28px auto 8px;
+      display: grid;
+      place-items: center;
+    }
+    .dial svg {
+      width: 100%;
+      height: 100%;
+      transform: rotate(-90deg);
+    }
+    .dial .track { stroke: var(--track); }
+    .dial .progress {
+      stroke: var(--accent);
+      stroke-linecap: round;
+    }
+    .dial.pulse { animation: pulse .25s ease; }
+    @keyframes pulse {
+      0%   { transform: scale(1); }
+      35%  { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    .dial .center {
+      position: absolute;
+      text-align: center;
+      pointer-events: none;
+    }
+    .dial .count {
+      font-size: 2.4rem;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      line-height: 1.1;
+    }
+    .dial .unit { color: var(--muted); font-size: .85rem; }
+
+    /* ---- Controls card ---- */
+    .controls {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px 20px 20px;
+      box-shadow: 0 6px 24px var(--shadow);
+      transition: background .25s ease, border-color .25s ease;
+    }
+    .row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .row .label { color: var(--muted); }
+    .period-value {
+      font-weight: 700;
+      font-size: 1.1rem;
+      font-variant-numeric: tabular-nums;
     }
 
-    button {
-      padding: 8px 14px;
-      margin: 6px;
+    input[type="range"] {
+      width: 100%;
+      -webkit-appearance: none;
+      appearance: none;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--track);
+      outline: none;
       cursor: pointer;
     }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 4px solid var(--surface);
+      box-shadow: 0 1px 5px var(--shadow);
+    }
+    input[type="range"]::-moz-range-thumb {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 4px solid var(--surface);
+      box-shadow: 0 1px 5px var(--shadow);
+    }
+    .ticks {
+      position: relative;
+      height: 26px;
+      margin-top: 6px;
+    }
+    .ticks span {
+      position: absolute;
+      transform: translateX(-50%);
+      color: var(--muted);
+      font-size: .72rem;
+      text-align: center;
+      white-space: nowrap;
+    }
+    .ticks span::before {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 5px;
+      margin: 0 auto 3px;
+      background: var(--border);
+    }
+
+    .toggle-btn {
+      margin-top: 18px;
+      width: 100%;
+      padding: 14px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 12px;
+      background: var(--accent);
+      color: #fff;
+      cursor: pointer;
+      transition: background .2s ease, transform .05s ease;
+    }
+    .toggle-btn:active { transform: scale(.99); }
+    .toggle-btn.running { background: var(--stop); }
 
     .status {
-      margin-top: 20px;
-      font-weight: bold;
+      margin-top: 14px;
+      text-align: center;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: .9rem;
     }
   </style>
 </head>
 <body>
-  <h1>Click Sound Timer</h1>
+  <header>
+    <h1>Click Sound Timer</h1>
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle light/dark mode" title="Toggle light/dark mode">🌙</button>
+  </header>
 
-  <p>
-    This simple app plays a short click sound repeatedly.
-    By default, the sound plays every 10 seconds.
-    You can change the period below, then press Start.
+  <p class="intro">
+    Plays a short click sound on a repeating cycle. It starts automatically —
+    drag the slider to set the period.
   </p>
 
-  <label>
-    Period:
-    <input id="periodInput" type="number" min="0.1" step="0.1" value="10">
-    seconds
-  </label>
+  <div class="dial" id="dial">
+    <svg viewBox="0 0 230 230" aria-hidden="true">
+      <circle class="track" cx="115" cy="115" r="100" fill="none" stroke-width="14" />
+      <circle class="progress" id="progress" cx="115" cy="115" r="100" fill="none" stroke-width="14" />
+    </svg>
+    <div class="center">
+      <div class="count" id="count">10.0</div>
+      <div class="unit" id="unit">of 10 s</div>
+    </div>
+  </div>
 
-  <br><br>
+  <div class="controls">
+    <div class="row">
+      <span class="label">Period</span>
+      <span class="period-value"><span id="periodValue">10</span> s</span>
+    </div>
+    <input id="periodSlider" type="range" min="0" max="68" step="1" value="18" />
+    <div class="ticks">
+      <span style="left: calc(0% + 12px);">0.1</span>
+      <span style="left: calc(13.235% + 8.82px);">1</span>
+      <span style="left: calc(26.471% + 5.65px);">10</span>
+      <span style="left: calc(55.882% - 1.41px);">30</span>
+      <span style="left: calc(100% - 12px);">60</span>
+    </div>
 
-  <button id="startBtn">Start</button>
-  <button id="stopBtn">Stop</button>
-
-  <div class="status" id="status">Stopped</div>
+    <button id="toggleBtn" class="toggle-btn running">Stop</button>
+    <div class="status" id="status">Running — click every 10 s</div>
+  </div>
 
   <script>
-    let audioContext;
-    let timerId = null;
+    const slider     = document.getElementById("periodSlider");
+    const periodValue= document.getElementById("periodValue");
+    const toggleBtn  = document.getElementById("toggleBtn");
+    const statusEl   = document.getElementById("status");
+    const progressEl = document.getElementById("progress");
+    const countEl    = document.getElementById("count");
+    const unitEl     = document.getElementById("unit");
+    const dial       = document.getElementById("dial");
+    const themeToggle= document.getElementById("themeToggle");
 
-    const periodInput = document.getElementById("periodInput");
-    const startBtn = document.getElementById("startBtn");
-    const stopBtn = document.getElementById("stopBtn");
-    const status = document.getElementById("status");
+    // Ring geometry: r = 100 -> circumference
+    const R = 100;
+    const C = 2 * Math.PI * R;
+    progressEl.style.strokeDasharray = C;
+    progressEl.style.strokeDashoffset = C;
 
-    function playClick() {
+    /* ---- Slider mapping ----
+       Index 0..8   -> 0.1 .. 0.9 s   (0.1 s steps below 1 second)
+       Index 9..68  -> 1 .. 60 s      (1 s steps from 1 second up, max 60) */
+    function indexToPeriod(i) {
+      i = Number(i);
+      return i < 9 ? (i + 1) / 10 : i - 8;
+    }
+    function fmt(p) {
+      return p < 1 ? p.toFixed(1) : String(Math.round(p));
+    }
+
+    let period = indexToPeriod(slider.value);
+    let running = true;
+    let cycleStart = performance.now();
+    let pausedElapsed = 0;
+    let audioEnabled = false;
+    let dragging = false;
+    let wasRunning = true;
+
+    /* ---- Audio ---- */
+    let audioContext = null;
+    function markEnabled() {
+      if (!audioEnabled) {
+        audioEnabled = true;
+        updateStatus();
+      }
+    }
+    function ensureAudio() {
       if (!audioContext) {
         audioContext = new (window.AudioContext || window.webkitAudioContext)();
       }
-
+      if (audioContext.state === "suspended") {
+        audioContext.resume().then(markEnabled).catch(() => {});
+      } else if (audioContext.state === "running") {
+        markEnabled();
+      }
+    }
+    function playClick() {
+      // Never play into a suspended context — that's what the autoplay policy
+      // blocks. Stay silent until audio is actually enabled by a gesture.
+      if (!audioContext || audioContext.state !== "running") return;
+      const t = audioContext.currentTime;
       const oscillator = audioContext.createOscillator();
       const gain = audioContext.createGain();
-
       oscillator.type = "square";
-      oscillator.frequency.setValueAtTime(1000, audioContext.currentTime);
-
-      gain.gain.setValueAtTime(0.4, audioContext.currentTime);
-      gain.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.03);
-
+      oscillator.frequency.setValueAtTime(1000, t);
+      gain.gain.setValueAtTime(0.4, t);
+      gain.gain.exponentialRampToValueAtTime(0.001, t + 0.03);
       oscillator.connect(gain);
       gain.connect(audioContext.destination);
+      oscillator.start(t);
+      oscillator.stop(t + 0.03);
+    }
+    // Browsers block audio until a user gesture; resume on first interaction.
+    ["pointerdown", "keydown", "touchstart"].forEach((ev) =>
+      window.addEventListener(ev, ensureAudio)
+    );
 
-      oscillator.start();
-      oscillator.stop(audioContext.currentTime + 0.03);
+    /* ---- Visuals ---- */
+    function setProgress(frac) {
+      progressEl.style.strokeDashoffset = C * (1 - frac);
+    }
+    function pulse() {
+      dial.classList.remove("pulse");
+      void dial.offsetWidth; // restart animation
+      dial.classList.add("pulse");
+    }
+    function renderStatic(frac, remaining) {
+      setProgress(frac);
+      countEl.textContent = remaining.toFixed(1);
+      unitEl.textContent = "of " + fmt(period) + " s";
     }
 
-    function startTimer() {
-      stopTimer();
-
-      const periodSeconds = parseFloat(periodInput.value);
-
-      if (isNaN(periodSeconds) || periodSeconds <= 0) {
-        alert("Please enter a valid period greater than 0.");
-        return;
+    /* ---- Animation loop ---- */
+    function frame(now) {
+      if (running) {
+        let elapsed = (now - cycleStart) / 1000;
+        if (elapsed >= period) {
+          playClick();
+          pulse();
+          const remainder = (elapsed - period) % period;
+          cycleStart = now - remainder * 1000;
+          elapsed = remainder;
+        }
+        const frac = Math.min(elapsed / period, 1);
+        setProgress(frac);
+        countEl.textContent = Math.max(period - elapsed, 0).toFixed(1);
       }
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
 
-      playClick();
-
-      timerId = setInterval(playClick, periodSeconds * 1000);
-      status.textContent = `Running — click every ${periodSeconds} seconds`;
+    /* ---- Controls ---- */
+    function setButtonRunning(isRunning) {
+      toggleBtn.textContent = isRunning ? "Stop" : "Start";
+      toggleBtn.classList.toggle("running", isRunning);
     }
 
-    function stopTimer() {
-      if (timerId !== null) {
-        clearInterval(timerId);
-        timerId = null;
+    function updateStatus() {
+      if (dragging) {
+        statusEl.textContent = "Adjusting — " + fmt(period) + " s";
+      } else if (running) {
+        statusEl.textContent = "Running — click every " + fmt(period) + " s" +
+          (audioEnabled ? "" : " · tap anywhere to enable sound");
+      } else {
+        statusEl.textContent = "Paused";
       }
-      status.textContent = "Stopped";
     }
 
-    startBtn.addEventListener("click", startTimer);
-    stopBtn.addEventListener("click", stopTimer);
+    // While dragging the slider, everything goes quiet, resets and stops.
+    slider.addEventListener("input", () => {
+      if (!dragging) {
+        dragging = true;
+        wasRunning = running;
+      }
+      running = false;
+      period = indexToPeriod(slider.value);
+      periodValue.textContent = fmt(period);
+      pausedElapsed = 0;
+      renderStatic(0, period); // ring empty, full countdown, no sound
+      updateStatus();
+    });
+
+    // On release, resume whatever state we were in, from a fresh cycle.
+    slider.addEventListener("change", () => {
+      dragging = false;
+      running = wasRunning;
+      if (running) {
+        cycleStart = performance.now();
+      } else {
+        pausedElapsed = 0;
+        renderStatic(0, period);
+      }
+      updateStatus();
+    });
+
+    toggleBtn.addEventListener("click", () => {
+      ensureAudio();
+      running = !running;
+      if (running) {
+        // Resume from where we paused.
+        cycleStart = performance.now() - pausedElapsed * 1000;
+      } else {
+        pausedElapsed = (performance.now() - cycleStart) / 1000 % period;
+      }
+      setButtonRunning(running);
+      updateStatus();
+    });
+
+    /* ---- Theme ---- */
+    function applyTheme(theme) {
+      const light = theme === "light";
+      document.body.classList.toggle("light", light);
+      themeToggle.textContent = light ? "☀️" : "🌙";
+    }
+    let theme = "dark";
+    try {
+      theme = localStorage.getItem("timer-theme") || "dark";
+    } catch (e) { /* localStorage unavailable */ }
+    applyTheme(theme);
+
+    themeToggle.addEventListener("click", () => {
+      theme = document.body.classList.contains("light") ? "dark" : "light";
+      applyTheme(theme);
+      try { localStorage.setItem("timer-theme", theme); } catch (e) {}
+    });
+
+    // Initialise labels.
+    periodValue.textContent = fmt(period);
+    renderStatic(0, period);
+    updateStatus();
   </script>
 </body>
 </html>
