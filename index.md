@@ -48,6 +48,7 @@ XCH wallet: xch1nqw477dvxqm89dem92rxsgapyxc7203mwft8gpzxujkasvkej3fsvk0wnj
 ## Tools
 
 [Digits](digits.html)  
+[Timer](timer.html)  
 
 ## Support
 

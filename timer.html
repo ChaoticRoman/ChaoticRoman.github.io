@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Click Sound Timer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      line-height: 1.5;
+    }
+
+    label, input, button {
+      font-size: 1rem;
+    }
+
+    input {
+      width: 80px;
+      padding: 6px;
+      margin: 0 8px;
+    }
+
+    button {
+      padding: 8px 14px;
+      margin: 6px;
+      cursor: pointer;
+    }
+
+    .status {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Click Sound Timer</h1>
+
+  <p>
+    This simple app plays a short click sound repeatedly.
+    By default, the sound plays every 10 seconds.
+    You can change the period below, then press Start.
+  </p>
+
+  <label>
+    Period:
+    <input id="periodInput" type="number" min="0.1" step="0.1" value="10">
+    seconds
+  </label>
+
+  <br><br>
+
+  <button id="startBtn">Start</button>
+  <button id="stopBtn">Stop</button>
+
+  <div class="status" id="status">Stopped</div>
+
+  <script>
+    let audioContext;
+    let timerId = null;
+
+    const periodInput = document.getElementById("periodInput");
+    const startBtn = document.getElementById("startBtn");
+    const stopBtn = document.getElementById("stopBtn");
+    const status = document.getElementById("status");
+
+    function playClick() {
+      if (!audioContext) {
+        audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      }
+
+      const oscillator = audioContext.createOscillator();
+      const gain = audioContext.createGain();
+
+      oscillator.type = "square";
+      oscillator.frequency.setValueAtTime(1000, audioContext.currentTime);
+
+      gain.gain.setValueAtTime(0.4, audioContext.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.03);
+
+      oscillator.connect(gain);
+      gain.connect(audioContext.destination);
+
+      oscillator.start();
+      oscillator.stop(audioContext.currentTime + 0.03);
+    }
+
+    function startTimer() {
+      stopTimer();
+
+      const periodSeconds = parseFloat(periodInput.value);
+
+      if (isNaN(periodSeconds) || periodSeconds <= 0) {
+        alert("Please enter a valid period greater than 0.");
+        return;
+      }
+
+      playClick();
+
+      timerId = setInterval(playClick, periodSeconds * 1000);
+      status.textContent = `Running — click every ${periodSeconds} seconds`;
+    }
+
+    function stopTimer() {
+      if (timerId !== null) {
+        clearInterval(timerId);
+        timerId = null;
+      }
+      status.textContent = "Stopped";
+    }
+
+    startBtn.addEventListener("click", startTimer);
+    stopBtn.addEventListener("click", stopTimer);
+  </script>
+</body>
+</html>
