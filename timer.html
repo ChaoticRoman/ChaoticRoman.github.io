@@ -271,53 +271,68 @@
     function fmt(p) {
       return p < 1 ? p.toFixed(1) : String(Math.round(p));
     }
+    function mod(a, m) {
+      return ((a % m) + m) % m;
+    }
 
+    /* ---- State ---- */
     let period = indexToPeriod(slider.value);
     let running = true;
-    let cycleStart = performance.now();
-    let pausedElapsed = 0;
-    let audioEnabled = false;
     let dragging = false;
     let wasRunning = true;
+    let audioEnabled = false;
+    let perfAnchor = performance.now() / 1000; // cycle start before audio is on
+    let anchorTime = 0;                         // cycle start on the audio clock
+    let lastProgress = 0;
 
-    /* ---- Audio ---- */
+    /* ---- Audio scheduling ----
+       Clicks are pre-scheduled on the Web Audio clock, which runs on a separate
+       thread — so playback keeps going even when the tab is backgrounded (where
+       setInterval / requestAnimationFrame get throttled or paused). */
     let audioContext = null;
-    function markEnabled() {
-      if (!audioEnabled) {
-        audioEnabled = true;
-        updateStatus();
-      }
-    }
-    function ensureAudio() {
-      if (!audioContext) {
-        audioContext = new (window.AudioContext || window.webkitAudioContext)();
-      }
-      if (audioContext.state === "suspended") {
-        audioContext.resume().then(markEnabled).catch(() => {});
-      } else if (audioContext.state === "running") {
-        markEnabled();
-      }
-    }
-    function playClick() {
-      // Never play into a suspended context — that's what the autoplay policy
-      // blocks. Stay silent until audio is actually enabled by a gesture.
-      if (!audioContext || audioContext.state !== "running") return;
-      const t = audioContext.currentTime;
-      const oscillator = audioContext.createOscillator();
+    let schedulerId = null;
+    let nextNoteTime = 0;   // audio-clock time of the next click to schedule
+    let scheduled = [];     // already-scheduled oscillators, so we can cancel them
+    const SCHED_INTERVAL = 200;
+
+    function clickAt(time) {
+      const osc = audioContext.createOscillator();
       const gain = audioContext.createGain();
-      oscillator.type = "square";
-      oscillator.frequency.setValueAtTime(1000, t);
-      gain.gain.setValueAtTime(0.4, t);
-      gain.gain.exponentialRampToValueAtTime(0.001, t + 0.03);
-      oscillator.connect(gain);
+      osc.type = "square";
+      osc.frequency.setValueAtTime(1000, time);
+      gain.gain.setValueAtTime(0.4, time);
+      gain.gain.exponentialRampToValueAtTime(0.001, time + 0.03);
+      osc.connect(gain);
       gain.connect(audioContext.destination);
-      oscillator.start(t);
-      oscillator.stop(t + 0.03);
+      osc.start(time);
+      osc.stop(time + 0.04);
+      const entry = { osc };
+      scheduled.push(entry);
+      osc.onended = () => { scheduled = scheduled.filter((e) => e !== entry); };
     }
-    // Browsers block audio until a user gesture; resume on first interaction.
-    ["pointerdown", "keydown", "touchstart"].forEach((ev) =>
-      window.addEventListener(ev, ensureAudio)
-    );
+
+    function scheduler() {
+      if (!running || !audioContext || audioContext.state !== "running") return;
+      // Schedule far enough ahead that even a heavily throttled background tab
+      // (timers clamped to ~1/min) always has the next click queued in time.
+      const lookahead = Math.max(2, period * 2);
+      while (nextNoteTime < audioContext.currentTime + lookahead) {
+        clickAt(nextNoteTime);
+        nextNoteTime += period;
+      }
+    }
+    function startScheduler() {
+      if (schedulerId === null) schedulerId = setInterval(scheduler, SCHED_INTERVAL);
+    }
+    function stopScheduler() {
+      if (schedulerId !== null) { clearInterval(schedulerId); schedulerId = null; }
+    }
+    function cancelScheduled() {
+      if (!audioContext) return;
+      const now = audioContext.currentTime;
+      scheduled.forEach((e) => { try { e.osc.stop(now); } catch (_) {} });
+      scheduled = [];
+    }
 
     /* ---- Visuals ---- */
     function setProgress(frac) {
@@ -334,20 +349,63 @@
       unitEl.textContent = "of " + fmt(period) + " s";
     }
 
-    /* ---- Animation loop ---- */
-    function frame(now) {
+    /* ---- Start / stop the cycle ---- */
+    function start() {
+      running = true;
+      lastProgress = 0;
+      if (audioEnabled && audioContext && audioContext.state === "running") {
+        cancelScheduled();
+        anchorTime = audioContext.currentTime;
+        nextNoteTime = anchorTime; // click right away, then once per period
+        startScheduler();
+        scheduler();
+        pulse();
+      } else {
+        perfAnchor = performance.now() / 1000;
+      }
+    }
+    function stop() {
+      running = false;
+      stopScheduler();
+      cancelScheduled();
+    }
+
+    /* ---- Audio enable / best-effort autoplay ---- */
+    function markEnabled() {
+      if (!audioEnabled) {
+        audioEnabled = true;
+        if (running) start(); // re-anchor onto the audio clock and click now
+      }
+      updateStatus();
+    }
+    function ensureAudio() {
+      if (!audioContext) {
+        audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      if (audioContext.state === "running") markEnabled();
+      else audioContext.resume().then(markEnabled).catch(() => {});
+    }
+    // Resume on the first gesture (autoplay fallback) and when returning to the tab.
+    ["pointerdown", "keydown", "touchstart"].forEach((ev) =>
+      window.addEventListener(ev, ensureAudio)
+    );
+    document.addEventListener("visibilitychange", () => {
+      if (!document.hidden) ensureAudio();
+    });
+
+    /* ---- Animation loop (visual only; sound is scheduled separately) ---- */
+    function frame() {
       if (running) {
-        let elapsed = (now - cycleStart) / 1000;
-        if (elapsed >= period) {
-          playClick();
-          pulse();
-          const remainder = (elapsed - period) % period;
-          cycleStart = now - remainder * 1000;
-          elapsed = remainder;
-        }
-        const frac = Math.min(elapsed / period, 1);
-        setProgress(frac);
-        countEl.textContent = Math.max(period - elapsed, 0).toFixed(1);
+        const useAudio = audioEnabled && audioContext && audioContext.state === "running";
+        const t = useAudio ? audioContext.currentTime : performance.now() / 1000;
+        const anchor = useAudio ? anchorTime : perfAnchor;
+        const elapsed = mod(t - anchor, period);
+        const progress = elapsed / period;
+        if (progress < lastProgress) pulse(); // cycle wrapped → a click just fired
+        lastProgress = progress;
+        setProgress(progress);
+        countEl.textContent = (period - elapsed).toFixed(1);
+        unitEl.textContent = "of " + fmt(period) + " s";
       }
       requestAnimationFrame(frame);
     }
@@ -358,7 +416,6 @@
       toggleBtn.textContent = isRunning ? "Stop" : "Start";
       toggleBtn.classList.toggle("running", isRunning);
     }
-
     function updateStatus() {
       if (dragging) {
         statusEl.textContent = "Adjusting — " + fmt(period) + " s";
@@ -376,10 +433,10 @@
         dragging = true;
         wasRunning = running;
       }
-      running = false;
+      stop();
       period = indexToPeriod(slider.value);
       periodValue.textContent = fmt(period);
-      pausedElapsed = 0;
+      lastProgress = 0;
       renderStatic(0, period); // ring empty, full countdown, no sound
       updateStatus();
     });
@@ -387,11 +444,9 @@
     // On release, resume whatever state we were in, from a fresh cycle.
     slider.addEventListener("change", () => {
       dragging = false;
-      running = wasRunning;
-      if (running) {
-        cycleStart = performance.now();
+      if (wasRunning) {
+        start();
       } else {
-        pausedElapsed = 0;
         renderStatic(0, period);
       }
       updateStatus();
@@ -399,14 +454,13 @@
 
     toggleBtn.addEventListener("click", () => {
       ensureAudio();
-      running = !running;
       if (running) {
-        // Resume from where we paused.
-        cycleStart = performance.now() - pausedElapsed * 1000;
+        stop();
+        setButtonRunning(false);
       } else {
-        pausedElapsed = (performance.now() - cycleStart) / 1000 % period;
+        start();
+        setButtonRunning(true);
       }
-      setButtonRunning(running);
       updateStatus();
     });
 
@@ -428,10 +482,12 @@
       try { localStorage.setItem("timer-theme", theme); } catch (e) {}
     });
 
-    // Initialise labels.
+    // Initialise labels and try to start audio right away. If the browser
+    // blocks autoplay it stays silent until the first gesture (tap anywhere).
     periodValue.textContent = fmt(period);
     renderStatic(0, period);
     updateStatus();
+    ensureAudio();
   </script>
 </body>
 </html>
