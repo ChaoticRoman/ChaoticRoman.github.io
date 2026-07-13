@@ -4,6 +4,7 @@ description: personal webpage
 ---
 
 [Short bio](bio)  
+[CV in English \[Google doc\]](https://docs.google.com/document/d/1chWjWus-AKZ4OC9tiD6cijwMMeaZSnZuHH4SbBLnbwY)  
 Phone number CZ: [+420 736 452 265](tel:+420736452265)  
 Phone number AU: [+61 493 827 875](tel:+61493827875)  
 E-mail: [roman.pavelka.asi@gmail.com](mailto:roman.pavelka.asi@gmail.com)  
@@ -18,8 +19,6 @@ Důchodové pojištění (variabilní symbol): 75664501
 Číslo účtu: [1026116241/5500 (Raiffeisenbank)](qr)  
 IBAN: CZ6655000000001026116241  
 XCH wallet: xch1nqw477dvxqm89dem92rxsgapyxc7203mwft8gpzxujkasvkej3fsvk0wnj  
-[CV in English \[Google doc\]](https://docs.google.com/document/d/1chWjWus-AKZ4OC9tiD6cijwMMeaZSnZuHH4SbBLnbwY)  
-[CV in Czech \[Google doc\]](https://docs.google.com/document/d/1kjOD4RH9kXEZwlxmo9bSw1o4J6N0vOD-g8OP7KHNMnA)  
 [Picture of me \[JPEG\]](rpavelka-cpp.jpeg)  
 [Bachelor thesis \[PDF\]](fluxgate.pdf),
 [review by supervisor \[PDF\]](Review_Roman_Pavelka.pdf),
@@ -27,13 +26,14 @@ XCH wallet: xch1nqw477dvxqm89dem92rxsgapyxc7203mwft8gpzxujkasvkej3fsvk0wnj
 [Bachelor degree diploma \[PDF\]](diplom.pdf), [diploma supplement \[PDF\]](dodatek.pdf)  
 
 [PTE Academic \[PDF\]](ROMAN_PAVELKA_541032946.pdf)
-* Overall: 90, Listening: 90, Reading: 90, Speaking: 71, Writing: 87, [skills profile \[PNG\]](pte-skills-profile.png)
+* Overall: 90, Listening: 90, Reading: 90, Speaking: 71, Writing: 87
 * [CEFR equivalent: C2](https://www.pearsonpte.com/pte-academic/scoring/understand-your-score/)
-* [Proficient English per Australian Government, The Department of Home Affairs][proficient]
-
-[Sizes](sizes), [Meds](meds)  
+* [Proficient English (Australian Government, The Department of Home Affairs)][proficient]
+* [Skills profile \[PNG\]](pte-skills-profile.png)
 
 [proficient]: https://immi.homeaffairs.gov.au/help-support/meeting-our-requirements/english-language/proficient-english
+
+[Sizes](sizes), [Meds](meds)  
 
 ## Topics
 
