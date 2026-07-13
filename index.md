@@ -23,7 +23,7 @@ XCH wallet: xch1nqw477dvxqm89dem92rxsgapyxc7203mwft8gpzxujkasvkej3fsvk0wnj
 [Picture of me \[JPEG\]](rpavelka-cpp.jpeg)  
 [Bachelor thesis \[PDF\]](fluxgate.pdf),
 [review by supervisor \[PDF\]](Review_Roman_Pavelka.pdf),
-[oponnent review \[PDF\]](Roman_bw.pdf)  
+[opponent review \[PDF\]](Roman_bw.pdf)  
 [Bachelor degree diploma \[PDF\]](diplom.pdf), [diploma supplement \[PDF\]](dodatek.pdf)  
 [PTE Academic \[PDF\]](ROMAN_PAVELKA_541032946.pdf)
 * Overall: 90, Listening: 90, Reading: 90, Speaking: 71, Writing: 87, [skills profile \[PNG\]](pte-skills-profile.png)
@@ -59,10 +59,10 @@ XCH wallet: xch1nqw477dvxqm89dem92rxsgapyxc7203mwft8gpzxujkasvkej3fsvk0wnj
 
 Organizations I proudly support through financial contributions and/or volunteering:
 
-[<img alt="UNITED24" src=" supporting/u24.gif" height="100">](https://u24.gov.ua/)
+[<img alt="UNITED24" src="supporting/u24.gif" height="100">](https://u24.gov.ua/)
 [<img alt="Nadační fond pro Ukrajinu" src="supporting/darek.svg" height="100">](https://www.zbraneproukrajinu.cz/)
 [<img alt="Zdravotní zajištění z.s." src="supporting/zdravotnizajisteni.png" height="100">](https://zdravotnizajisteni.cz/)
-[<img alt="Mezinárodní Humanitární Nadační fond Perun " src="supporting/perun.png" height="100">](https://zdravotnizajisteni.cz/)
+[<img alt="Mezinárodní Humanitární Nadační fond Perun" src="supporting/perun.png" height="100">](https://zdravotnizajisteni.cz/)
 [<img alt="Aerorozvědka z.s." src="supporting/aerorozvedka.svg" height="100">](https://aerorozvedka.cz/)
 [<img alt="Wild Hornets" src="supporting/wildhornets.svg" height="100">](https://wildhornets.com/)
 [<img alt="Third Separate Assault Brigade of the Armed Forces of Ukraine" src="supporting/ab3.svg" height="100">](https://ab3.support/en)
