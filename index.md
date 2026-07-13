@@ -25,8 +25,13 @@ XCH wallet: xch1nqw477dvxqm89dem92rxsgapyxc7203mwft8gpzxujkasvkej3fsvk0wnj
 [review by supervisor \[PDF\]](Review_Roman_Pavelka.pdf),
 [oponnent review \[PDF\]](Roman_bw.pdf)  
 [Bachelor degree diploma \[PDF\]](diplom.pdf), [diploma supplement \[PDF\]](dodatek.pdf)  
-[PTE Academic English Practice Test \[PNG\]](pte.png)  
+[PTE Academic \[PDF\]](ROMAN_PAVELKA_541032946.pdf)
+* Overall: 90, Listening: 90, Reading: 90, Speaking: 71, Writing: 87, [skills profile \[PNG\]](pte-skills-profile.png)
+* [CEFR equivalent: C2](https://www.pearsonpte.com/pte-academic/scoring/understand-your-score/)
+* [Proficient English per Australian Government, The Department of Home Affairs][proficient]
 [Sizes](sizes), [Meds](meds)  
+
+[proficient]: https://immi.homeaffairs.gov.au/help-support/meeting-our-requirements/english-language/proficient-english
 
 ## Topics
 
