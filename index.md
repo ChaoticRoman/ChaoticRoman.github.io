@@ -23,7 +23,8 @@ XCH wallet: xch1nqw477dvxqm89dem92rxsgapyxc7203mwft8gpzxujkasvkej3fsvk0wnj
 [Bachelor thesis \[PDF\]](fluxgate.pdf),
 [review by supervisor \[PDF\]](Review_Roman_Pavelka.pdf),
 [opponent review \[PDF\]](Roman_bw.pdf)  
-[Bachelor degree diploma \[PDF\]](diplom.pdf), [diploma supplement \[PDF\]](dodatek.pdf)  
+[Bachelor degree diploma \[PDF\]](diploma.pdf) ([600 dpi PDF](diploma-600dpi.pdf)),
+[diploma supplement \[PDF\]](diploma-supplement.pdf)([600 dpi PDF](diploma-supplement-600dpi.pdf))  
 
 [PTE Academic \[PDF\]](ROMAN_PAVELKA_541032946.pdf)
 * Overall: 90, Listening: 90, Reading: 90, Speaking: 71, Writing: 87
